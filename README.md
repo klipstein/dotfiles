@@ -118,3 +118,14 @@ This folder is a collection of my own repos, some of which are even private. The
 
 ### Visual Studio Code
 * Settings synched via GitHub
+
+### Python
+
+This uses [pyenv](https://github.com/pyenv/pyenv) as python version manager:
+
+~~~sh
+# how to install a specific python version globally
+pyenv install 3.9
+pyenv global 3.9
+pyenv version
+~~~

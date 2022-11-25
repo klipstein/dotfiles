@@ -30,7 +30,7 @@ cask 'vlc'
 brew 'ack'
 brew 'atuin'
 brew 'aws-sam-cli'
-brew 'awscli',
+brew 'awscli'
 brew 'brew-cask-completion'
 brew 'cmake'
 brew 'coreutils'

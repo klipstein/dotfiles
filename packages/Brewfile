@@ -6,6 +6,7 @@ tap 'mongodb/brew'
 tap 'aws/tap'
 
 cask 'browserstacklocal'
+cask 'cursor'
 cask 'discord'
 cask 'docker'
 cask 'firefox'

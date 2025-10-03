@@ -13,10 +13,6 @@ info "Installing Brewfile packages..."
 brew bundle
 success "Finished installing Brewfile packages."
 
-eval "$(fnm env --use-on-cd)"
-fnm use 16
-success "Switched to Node v16"
-
 find * -name "*.list" | while read fn; do
     cmd="${fn%.*}"
     set -- $cmd
@@ -28,3 +24,7 @@ find * -name "*.list" | while read fn; do
     done < "$fn"
     success "Finished installing $1 packages."
 done
+
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+pnpm env use --global lts
+success "Switched to Node LTS"

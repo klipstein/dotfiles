@@ -39,3 +39,10 @@ envsource ~/.secrets
 
 # Added by Windsurf
 fish_add_path /Users/kli0002t/.codeium/windsurf/bin
+
+# pnpm
+set -gx PNPM_HOME "/Users/kli0002t/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

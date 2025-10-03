@@ -33,3 +33,9 @@ fnm env --use-on-cd | source
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 set -gx nvm_prefix /opt/homebrew/opt/nvm
+
+# NPM Token for 7TV Registry
+envsource ~/.secrets
+
+# Added by Windsurf
+fish_add_path /Users/kli0002t/.codeium/windsurf/bin

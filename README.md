@@ -55,12 +55,11 @@ This folder is a collection of my own repos, some of which are even private. The
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 * config.fish - Global fish configuration (.fishrc)
-* fishfile - List of `fisher` plugins
+* fish_plugins - List of [fisher](https://github.com/jorgebucaran/fisher) plugins to install
 * completions/
   * fisher.fish - Simplifies installing further fish modules
   * repo.fish - Contains all repos as completions for the `repo` command
   * repodir.fish - Contains all repos as completions for the `repodir` command
-  * nvm.fish - Completions for nvm (node version manager) command
 * functions/
   * abbrex.fish - Utility for expanding abbreviations in fish-scripts
   * clear.fish - Clears the screen and shows fish_greeting
@@ -71,14 +70,13 @@ This folder is a collection of my own repos, some of which are even private. The
   * forrepos.fish - Executes a passed command for all repos in `~/repos`
   * ls.fish - Calling ls with parameter --color=auto
   * manp.fish - Open a man page in Preview
-  * mvnpurge.fish - Purge local mvn repository
-  * nvm.fish - The nvm (node version manager) command for fish
   * pubkey.fish - Copies the SSH public key to the clipboard
   * repo.fish - Finds a repository in `~/repos` and jumps to it
   * repodir.fish - Finds a repository in `~/repos` and prints its path
   * setup.fish - Initial setup for a new fish installation, contains abbreviations
   * update.fish - Installs OS X Software Updates, updates Ruby gems, Homebrew, npm, and their installed packages
   * week.fish - Returns the current week number
+  * yarn.fish - yarn command for fish
 
 ### Git (git/)
 * setup.sh - Symlinks all git files to `~/`
@@ -118,3 +116,14 @@ This folder is a collection of my own repos, some of which are even private. The
 
 ### Visual Studio Code
 * Settings synched via GitHub
+
+### Python
+
+This uses [pyenv](https://github.com/pyenv/pyenv) as python version manager:
+
+~~~sh
+# how to install a specific python version globally
+pyenv install 3.9
+pyenv global 3.9
+pyenv version
+~~~

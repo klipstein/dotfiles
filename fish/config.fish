@@ -21,28 +21,25 @@ set -x -g PATH (brew --prefix findutils)/libexec/gnubin $PATH
 set -x -g PATH ~/go/bin $PATH
 
 # User bin folder
-set -x -g PATH ~/bin ~/.local/bin $PATH
+set -x -g PATH ~/bin ~/.local/bin ~/.opencode/bin $PATH
 
 # Composer
 set -x -g PATH ~/.composer/vendor/bin $PATH
 
 # fnm
-set -x -g PATH /home/rosco/.fnm $PATH
-fnm env --use-on-cd | source
+if command -q fnm
+  fnm env --use-on-cd | source
+end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 set -gx nvm_prefix /opt/homebrew/opt/nvm
 
-# NPM Token for 7TV Registry
-envsource ~/.secrets
-
-# Added by Windsurf
-fish_add_path /Users/kli0002t/.codeium/windsurf/bin
+# Secrets
+test -e {$HOME}/.secrets ; and envsource ~/.secrets
 
 # pnpm
 set -gx PNPM_HOME "/Users/kli0002t/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
-# pnpm end

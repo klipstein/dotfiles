@@ -22,6 +22,27 @@ For more information about dotfiles, I wrote these articles on my blog:
 5. Login to applications, enter license keys, set preferences (open Karabiner-Elements.app & hammerspoon.app in order to give proper permissions for keyboard bindings)
 6. Reboot
 
+## Secrets Configuration (`~/.secrets`)
+
+Create `~/.secrets` in your home directory (`chmod 600 ~/.secrets`) before running `bootstrap.sh`. This file is intentionally not tracked in Git.
+
+The repository uses the following variables from `~/.secrets`:
+
+```sh
+# LLM Gateway Endpoint & Key (used by zed/setup.sh and exported in fish)
+LLMGW_API_URL=https://your-llm-gateway-url/v1
+LLMGW_API_KEY=your-api-key
+
+# NPM Registry Tokens (exported in fish shell via envsource)
+NPM_TOKEN=your-npm-token
+NPM_TOKEN_7TV_REGISTRY=your-7tv-registry-token
+NPM_TOKEN_GITHUB_REGISTRY=your-github-token
+NPM_TOKEN_GITLAB_REGISTRY=your-gitlab-token
+```
+
+* `LLMGW_API_URL`: Substituted into `~/.config/zed/settings.json` during `zed/setup.sh`. If not provided, it defaults to `https://api.openai.com/v1`.
+* All `KEY=VALUE` pairs defined in `~/.secrets` are automatically exported into your shell environment by Fish (`fish/config.fish`).
+
 ## Customisation
 I strongly encourage you to play around with the configurations, and add or remove features.
 If you would like to use these dotfiles for yourself, I'd recommend changing at least the following:
@@ -83,6 +104,10 @@ This folder is a collection of my own repos, some of which are even private. The
 * .gitignore_global - Contains global gitignores, such as OS-specific files and several compiled files
 * .gitconfig - Sets several global Git variables
 
+### Ghostty (ghostty/)
+* setup.sh - Symlinks Ghostty configuration to `~/.config/ghostty/config`
+* config - Theme and UI settings for Ghostty terminal
+
 ### Hammerspoon (hammerspoon/)
 * setup.sh - Symlinks all lua and AppleScript files to `~/.hammerspoon/`
 * init.lua - Contains the main Hammerspoon config, importing the others
@@ -114,8 +139,10 @@ This folder is a collection of my own repos, some of which are even private. The
 * setup.sh - Symlinks all vim files to `~/`
 * .vimrc - Basic Vim configuration
 
-### Visual Studio Code
-* Settings synched via GitHub
+### Zed (zed/)
+* setup.sh - Links `keymap.json` and generates `~/.config/zed/settings.json` with private substitutions from `~/.secrets`
+* settings.json - Sanitized settings template for Zed editor
+* keymap.json - Custom key bindings for Zed
 
 ### Python
 

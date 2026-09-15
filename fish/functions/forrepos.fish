@@ -1,5 +1,6 @@
 function forrepos --description 'Evaluates $argv for all repo folders'
-    for d in (find ~/repos -mindepth 2 -maxdepth 2 ! -path . -type d)
+    for gitdir in (find ~/repos -name ".git" -type d)
+        set d (dirname $gitdir)
         pushd $d
         set repo (basename $d)
         echo $repo

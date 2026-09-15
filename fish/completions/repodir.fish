@@ -1,3 +1,3 @@
-for repo in (find ~/repos -mindepth 2 -maxdepth 2 -type d)
-    complete -f -c repodir -a "(basename \"$repo\")"
+for gitdir in (find ~/repos -name ".git" -type d)
+    complete -f -c repodir -a "(basename (dirname \"$gitdir\"))"
 end

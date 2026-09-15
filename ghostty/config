@@ -1,0 +1,5 @@
+# Ghostty configuration
+
+theme = dark:One Dark,light:One Light
+font-size = 14
+macos-titlebar-style = transparent

@@ -182,3 +182,9 @@ hs_err_pid*
 
 # we really don't want to commit
 node_modules
+.secrets
+.env
+.env.*
+*.local
+*.pem
+*.key

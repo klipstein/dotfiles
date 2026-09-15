@@ -18,6 +18,14 @@
 .bib
 .tex
 .json
+.jsonc
+.yaml
+.yml
+.toml
+.rs
+.css
+.html
+.sql
 .php
 .cs
 .java

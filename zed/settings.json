@@ -1,0 +1,303 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"disable_ai": false,
+	"cli_default_open_behavior": "new_window",
+	"outline_panel": {
+		"dock": "right"
+	},
+	"collaboration_panel": {
+		"dock": "right"
+	},
+	"git_panel": {
+		"dock": "right"
+	},
+	"edit_predictions": {
+		"provider": "zed"
+	},
+	"agent_servers": {
+		"github-copilot": {
+			"type": "registry"
+		}
+	},
+	"hover_popover_enabled": true,
+	"context_servers": {
+		"chrome-devtools-mcp-zed": {
+			"enabled": true,
+			"remote": false,
+			"settings": {}
+		},
+		"mcp-server-github": {
+			"enabled": true,
+			"remote": false,
+			"settings": {
+				"github_personal_access_token": ""
+			}
+		},
+		"mcp-server-context7": {
+			"enabled": true,
+			"settings": {
+				"context7_api_key": ""
+			}
+		},
+		"pdf-reader": {
+			"enabled": true,
+			"remote": false,
+			"command": "npx",
+			"args": ["@sylphx/pdf-reader-mcp"]
+		}
+	},
+	"format_on_save": "on",
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"agent": {
+		"tool_permissions": {
+			"default": "allow"
+		},
+		"dock": "left",
+		"default_profile": "default",
+		"auto_compact": {
+			"enabled": true,
+			"threshold": "50%"
+		},
+		"profiles": {
+			"default": {
+				"name": "Default (llmgw)",
+				"enable_all_context_servers": true,
+				"tools": {
+					"read_file": true,
+					"list_directory": true,
+					"grep": true,
+					"find_path": true,
+					"diagnostics": true,
+					"fetch": true,
+					"edit_file": true,
+					"create_directory": true,
+					"copy_path": true,
+					"move_path": true,
+					"delete_path": true,
+					"terminal": true
+				},
+				"default_model": {
+					"provider": "llmgw",
+					"model": "claude-sonnet-5",
+					"enable_thinking": false
+				}
+			}
+		},
+		"default_model": {
+			"effort": "low",
+			"provider": "llmgw",
+			"model": "claude-sonnet-5",
+			"enable_thinking": true
+		}
+	},
+	"language_models": {
+		"openai_compatible": {
+			"llmgw": {
+				"api_url": "__LLMGW_API_URL__",
+				"available_models": [
+					{
+						"name": "claude-sonnet-5",
+						"display_name": "Claude Sonnet 5.0",
+						"max_tokens": 1000000,
+						"max_output_tokens": 128000,
+						"reasoning_effort": "low",
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "claude-opus-4-8",
+						"display_name": "Claude Opus 4.8 (expensive)",
+						"max_tokens": 1000000,
+						"max_output_tokens": 128000,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "vertex_ai/gemini-3.5-flash",
+						"display_name": "Gemini 3.5 Flash",
+						"max_tokens": 1048576,
+						"max_output_tokens": 65535,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "gemini-3.1-pro-preview",
+						"display_name": "Gemini 3.1 Pro (Latest)",
+						"max_tokens": 1048576,
+						"max_output_tokens": 65536,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "gpt-5.6-sol",
+						"display_name": "GPT-5.6 Sol",
+						"max_tokens": 1050000,
+						"max_output_tokens": 128000,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "gpt-5.6-terra",
+						"display_name": "GPT-5.6 Terra",
+						"max_tokens": 1050000,
+						"max_output_tokens": 128000,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "gpt-5.6-luna",
+						"display_name": "GPT-5.6 Luna",
+						"max_tokens": 1050000,
+						"max_output_tokens": 128000,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					}
+				]
+			}
+		}
+	},
+	"project_panel": {
+		"dock": "right",
+		"hide_gitignore": true
+	},
+	"base_keymap": "VSCode",
+	"use_on_type_format": true,
+	"show_edit_predictions": true,
+	"ensure_final_newline_on_save": true,
+	"tab_size": 2,
+	"icon_theme": {
+		"mode": "light",
+		"light": "Zed (Default)",
+		"dark": "Zed (Default)"
+	},
+	"ui_font_size": 16,
+	"buffer_font_size": 15,
+	"theme": {
+		"mode": "light",
+		"light": "One Light",
+		"dark": "One Dark"
+	},
+	"formatter": {
+		"external": {
+			"command": "biome",
+			"arguments": ["format", "--stdin-file-path", "{buffer_path}"]
+		}
+	},
+	"languages": {
+		"JavaScript": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			},
+			"code_actions_on_format": {
+				"source.organizeImports.biome": true
+			}
+		},
+		"TypeScript": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			},
+			"code_actions_on_format": {
+				"source.organizeImports.biome": true
+			}
+		},
+		"TSX": {
+			"language_servers": ["vtsls", "biome"],
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			},
+			"code_actions_on_format": {
+				"source.organizeImports.biome": true
+			}
+		},
+		"JSON": {
+			"language_servers": ["json-language-server", "biome"],
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		},
+		"JSONC": {
+			"language_servers": ["json-language-server", "biome"],
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			}
+		}
+	},
+	"lsp": {
+		"vtsls": {
+			"settings": {
+				"javascript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always"
+					}
+				},
+				"typescript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always"
+					},
+					"preferences": {
+						"includePackageJsonAutoImports": "on"
+					}
+				}
+			}
+		},
+		"rust-analyzer": {
+			"initialization_options": {
+				"hover": {
+					"actions": {
+						"enable": true
+					}
+				}
+			}
+		}
+	}
+}

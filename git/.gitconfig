@@ -6,16 +6,21 @@
 	editor = /usr/bin/vim
 	ignorecase = false
 [diff]
-    tool = vscode
-[difftool "vscode"]
-  	cmd = code --wait --diff $LOCAL $REMOTE
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
 [merge]
-  	tool = vscode
-[mergetool "vscode"]
-  	cmd = code --wait $MERGED
+	tool = vimdiff
+[mergetool]
+	prompt = false
 [push]
 	default = current
 [alias]
+	dft = difftool
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD~
 	rb = "!f() { \

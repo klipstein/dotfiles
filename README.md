@@ -144,6 +144,18 @@ This folder is a collection of my own repos, some of which are even private. The
 * settings.json - Sanitized settings template for Zed editor
 * keymap.json - Custom key bindings for Zed
 
+### AI Coding Tools
+
+* **Herdr**: Terminal workspace manager for AI coding agents
+  ```sh
+  curl -fsSL https://herdr.dev/install | bash
+  ```
+  Update via `herdr update`.
+* **Opencode**: AI coding agent CLI
+  ```sh
+  curl -fsSL https://opencode.ai/install | bash
+  ```
+
 ### Python
 
 This uses [pyenv](https://github.com/pyenv/pyenv) as python version manager:

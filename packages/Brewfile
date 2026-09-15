@@ -4,21 +4,15 @@ tap 'mongodb/brew'
 tap 'aws/tap'
 tap 'soeg-shared/tap', 'https://gitlab.p7s1.io/homebrew/soeg-shared.git'
 
-cask 'discord'
-cask 'docker-desktop'
 cask 'gcloud-cli'
 cask 'ghostty'
 cask 'hammerspoon'
-cask 'handbrake-app'
 cask 'imageoptim'
-cask 'iterm2'
 cask 'karabiner-elements'
 cask 'openaudible'
 cask 'postgres-app'
-cask 'spotify'
 cask 'typora'
 cask 'vanilla'
-cask 'vlc'
 cask 'zed'
 
 brew 'ack'
@@ -56,5 +50,9 @@ brew 'tig'
 brew 'tldr'
 brew 'yq'
 
+mas 'ExcalidrawZ', id: 6636493997
+mas 'Keynote', id: 409183694
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
 mas 'ToothFairy', id: 1191449274
 mas 'Xcode', id: 497799835

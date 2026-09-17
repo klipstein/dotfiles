@@ -35,7 +35,7 @@ set_fish_shell() {
             fi
         fi
         substep_info "Changing shell to fish"
-        if chsh -s "$(which fish)"; then
+        if sudo dscl . -create /Users/$USER UserShell "$(which fish)" 2>/dev/null || sudo chsh -s "$(which fish)" "$USER" 2>/dev/null || chsh -s "$(which fish)"; then
             substep_success "Changed shell to fish"
         else
             substep_error "Failed changing shell to fish"

@@ -25,6 +25,8 @@ find * -name "*.list" | while read fn; do
     success "Finished installing $1 packages."
 done
 
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-pnpm env use --global lts
-success "Switched to Node LTS"
+if command -v fnm >/dev/null 2>&1; then
+    fnm install --lts
+    fnm default lts
+    success "Configured Node LTS via fnm."
+fi

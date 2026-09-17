@@ -88,7 +88,7 @@
 				},
 				"default_model": {
 					"provider": "llmgw",
-					"model": "claude-sonnet-5",
+					"model": "claude-sonnet",
 					"enable_thinking": false
 				}
 			}
@@ -96,7 +96,7 @@
 		"default_model": {
 			"effort": "low",
 			"provider": "llmgw",
-			"model": "claude-sonnet-5",
+			"model": "claude-sonnet",
 			"enable_thinking": true
 		}
 	},
@@ -106,8 +106,8 @@
 				"api_url": "__LLMGW_API_URL__",
 				"available_models": [
 					{
-						"name": "claude-sonnet-5",
-						"display_name": "Claude Sonnet 5.0",
+						"name": "claude-sonnet",
+						"display_name": "Claude Sonnet",
 						"max_tokens": 1000000,
 						"max_output_tokens": 128000,
 						"reasoning_effort": "low",
@@ -119,8 +119,8 @@
 						}
 					},
 					{
-						"name": "claude-opus-4-8",
-						"display_name": "Claude Opus 4.8 (expensive)",
+						"name": "claude-opus",
+						"display_name": "Claude Opus",
 						"max_tokens": 1000000,
 						"max_output_tokens": 128000,
 						"capabilities": {
@@ -131,10 +131,10 @@
 						}
 					},
 					{
-						"name": "vertex_ai/gemini-3.5-flash",
-						"display_name": "Gemini 3.5 Flash",
-						"max_tokens": 1048576,
-						"max_output_tokens": 65535,
+						"name": "claude-haiku",
+						"display_name": "Claude Haiku",
+						"max_tokens": 200000,
+						"max_output_tokens": 64000,
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -143,8 +143,8 @@
 						}
 					},
 					{
-						"name": "gemini-3.1-pro-preview",
-						"display_name": "Gemini 3.1 Pro (Latest)",
+						"name": "gemini-flash",
+						"display_name": "Gemini Flash",
 						"max_tokens": 1048576,
 						"max_output_tokens": 65536,
 						"capabilities": {
@@ -155,9 +155,9 @@
 						}
 					},
 					{
-						"name": "gpt-5.6-sol",
-						"display_name": "GPT-5.6 Sol",
-						"max_tokens": 1050000,
+						"name": "gpt-sol",
+						"display_name": "GPT Sol",
+						"max_tokens": 922000,
 						"max_output_tokens": 128000,
 						"capabilities": {
 							"tools": true,
@@ -167,9 +167,9 @@
 						}
 					},
 					{
-						"name": "gpt-5.6-terra",
-						"display_name": "GPT-5.6 Terra",
-						"max_tokens": 1050000,
+						"name": "gpt-terra",
+						"display_name": "GPT Terra",
+						"max_tokens": 922000,
 						"max_output_tokens": 128000,
 						"capabilities": {
 							"tools": true,
@@ -179,13 +179,49 @@
 						}
 					},
 					{
-						"name": "gpt-5.6-luna",
-						"display_name": "GPT-5.6 Luna",
-						"max_tokens": 1050000,
+						"name": "gpt-luna",
+						"display_name": "GPT Luna",
+						"max_tokens": 922000,
 						"max_output_tokens": 128000,
 						"capabilities": {
 							"tools": true,
 							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "gpt-astra",
+						"display_name": "GPT Astra",
+						"max_tokens": 922000,
+						"max_output_tokens": 128000,
+						"capabilities": {
+							"tools": true,
+							"images": true,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "deepseek-pro",
+						"display_name": "DeepSeek Pro",
+						"max_tokens": 1000000,
+						"max_output_tokens": 384000,
+						"capabilities": {
+							"tools": true,
+							"images": false,
+							"parallel_tool_calls": false,
+							"prompt_cache_key": false
+						}
+					},
+					{
+						"name": "deepseek-flash",
+						"display_name": "DeepSeek Flash",
+						"max_tokens": 1000000,
+						"max_output_tokens": 384000,
+						"capabilities": {
+							"tools": true,
+							"images": false,
 							"parallel_tool_calls": false,
 							"prompt_cache_key": false
 						}

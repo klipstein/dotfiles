@@ -26,7 +26,12 @@ find * -name "*.list" | while read fn; do
 done
 
 if command -v fnm >/dev/null 2>&1; then
-    fnm install --lts
-    fnm default lts
+    LTS_VER=$(fnm ls-remote --lts 2>/dev/null | tail -n 1 | awk '{print $1}')
+    if [ -n "$LTS_VER" ]; then
+        fnm install "$LTS_VER"
+        fnm default "$LTS_VER"
+    else
+        fnm install --lts
+    fi
     success "Configured Node LTS via fnm."
 fi

@@ -30,7 +30,7 @@ sudo softwareupdate --install-rosetta
 ./packages/setup.sh
 
 find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
-    ./$setup
+    ./$setup < /dev/null
 done
 
 success "Finished installing Dotfiles"

@@ -42,9 +42,9 @@ set_fish_shell() {
             return 2
         fi
         substep_info "Running fish initial setup"
-        fish -c "setup"
+        fish -c "setup" < /dev/null
     fi
-    fish --command="fisher update"
+    fish --command="fisher update" < /dev/null
 }
 
 if set_fish_shell; then

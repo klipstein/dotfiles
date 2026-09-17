@@ -5,8 +5,8 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
-SOURCE="$(realpath -m .)"
-DESTINATION="$(realpath -m ~/.config/zed)"
+SOURCE="$(pwd -P)"
+DESTINATION="$HOME/.config/zed"
 
 info "Setting up Zed..."
 

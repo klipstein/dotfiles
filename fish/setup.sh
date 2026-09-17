@@ -5,8 +5,8 @@ cd "$DIR"
 
 . ../scripts/functions.sh
 
-SOURCE="$(realpath -m .)"
-DESTINATION="$(realpath -m ~/.config/fish)"
+SOURCE="$(pwd -P)"
+DESTINATION="$HOME/.config/fish"
 
 info "Setting up fish shell..."
 

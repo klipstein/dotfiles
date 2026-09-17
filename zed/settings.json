@@ -94,7 +94,7 @@
 			}
 		},
 		"default_model": {
-			"effort": "low",
+			"effort": "medium",
 			"provider": "llmgw",
 			"model": "claude-sonnet",
 			"enable_thinking": true
@@ -110,7 +110,7 @@
 						"display_name": "Claude Sonnet",
 						"max_tokens": 1000000,
 						"max_output_tokens": 128000,
-						"reasoning_effort": "low",
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -123,6 +123,7 @@
 						"display_name": "Claude Opus",
 						"max_tokens": 1000000,
 						"max_output_tokens": 128000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -135,6 +136,7 @@
 						"display_name": "Claude Haiku",
 						"max_tokens": 200000,
 						"max_output_tokens": 64000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -147,6 +149,7 @@
 						"display_name": "Gemini Flash",
 						"max_tokens": 1048576,
 						"max_output_tokens": 65536,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -159,6 +162,7 @@
 						"display_name": "GPT Sol",
 						"max_tokens": 922000,
 						"max_output_tokens": 128000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -171,6 +175,7 @@
 						"display_name": "GPT Terra",
 						"max_tokens": 922000,
 						"max_output_tokens": 128000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -183,6 +188,7 @@
 						"display_name": "GPT Luna",
 						"max_tokens": 922000,
 						"max_output_tokens": 128000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -195,6 +201,7 @@
 						"display_name": "GPT Astra",
 						"max_tokens": 922000,
 						"max_output_tokens": 128000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": true,
@@ -207,6 +214,7 @@
 						"display_name": "DeepSeek Pro",
 						"max_tokens": 1000000,
 						"max_output_tokens": 384000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": false,
@@ -219,6 +227,7 @@
 						"display_name": "DeepSeek Flash",
 						"max_tokens": 1000000,
 						"max_output_tokens": 384000,
+						"reasoning_effort": "medium",
 						"capabilities": {
 							"tools": true,
 							"images": false,
